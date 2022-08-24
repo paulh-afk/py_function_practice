@@ -1,3 +1,7 @@
+train_mass = 22680
+train_acceleration = 10
+
+
 def f_to_c(f_temp):
     return (f_temp - 32) * 5 / 9
 
@@ -17,3 +21,4 @@ def get_force(mass, acceleration):
 
 
 train_force = get_force(train_mass, train_acceleration)
+print('The GE train supplis', train_force, 'Newtons of force.')
