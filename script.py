@@ -1,5 +1,7 @@
 train_mass = 22680
 train_acceleration = 10
+train_distance = 100
+bomb_mass = 1
 
 
 def f_to_c(f_temp):
@@ -30,3 +32,12 @@ def get_energy(mass, c=3*10**8):
 
 bomb_energy = get_energy(bomb_mass)
 print('A 1kg bomb supplis', bomb_energy, 'Joules.')
+
+
+def get_work(mass, acceleration, distance):
+    return get_force(mass, acceleration) * distance
+
+
+train_work = get_work(train_mass, train_acceleration, train_distance)
+print('The GE train does', train_work,
+      'Joules of work over', train_distance, 'meters.')
